@@ -6,7 +6,7 @@
 
 int main()
 {
-  const std::string filename = "day-1/00/input/data";
+  const std::string filename = "day-1/part-1/input/data";
   std::ifstream inputFile(filename);
   std::vector<int> firstColumn, secondColumn;
 
