@@ -30,7 +30,7 @@ bool checkReport(const std::vector<int> &report, const bool problemDampener) {
 	bool allowRangeViolation = problemDampener;
 	for (int i = 0; isSafe && i < report.size() - 1; i++) {
 		if (allowRangeViolation && !inRange(report[i], report[i + 1])) {
-			if (!inRange(report[i - 1], report[i + 1])) {
+			if (i != 0 && !inRange(report[i - 1], report[i + 1])) {
 				return false;
 			}
 			allowRangeViolation = false;
